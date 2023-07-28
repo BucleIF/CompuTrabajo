@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Job Offer Details</h1>
+    <h3 th:text="'Name: '+ ${vacante.nombre}"></h3>
+    <h3 th:text="'Publication Date: '+ ${vacante.fecha}"></h3>
+    <h3 th:text="'Salary: '+ ${vacante.salario}"></h3>
+    <h3 th:text="'Description: '+ ${vacante.descripcion}"></h3>
+
+</body>
+</html>

@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeLeaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Principal Page</title>
 </head>
 <body>
+
     <h1>Welcome to CompuTrabajo App</h1>
+
+
+
+    <!-- <h1 th:text="${mensaje}">Welcome to CompuTrabajo </h1>
+    <h2>Today is [[${fecha}]]</h2> -->
+
+    <h1>Welcome</h1>
+    <h2>Job Offer</h2>
+    <h3 th:text="'Tittle:' + ${nombre}"></h3>
+    <h3 th:text="'Publication Date:' + ${fecha}"></h3>
+    <h3 th:text="'Salary Offered:' + ${salario}"></h3>
+    <h3 th:text="'Current:' + ${vigente}"></h3>
+
 </body>
 </html>
