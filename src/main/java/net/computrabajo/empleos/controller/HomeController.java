@@ -25,13 +25,6 @@ import net.computrabajo.empleos.model.Vacante;
 public class HomeController {
 
 
-    @GetMapping("/")
-    public String mostrarHome() {
-
-        return "home";
-
-    }
-
     @GetMapping("/tabla")
     public String mostrarTabla(Model model){
         List<Vacante> lista = getVacantes();
@@ -51,6 +44,7 @@ public class HomeController {
         vacante.setSalario(9700.0);
 
         model.addAttribute("vacante", vacante);
+		
         return "detalle";
 
     }
@@ -106,6 +100,8 @@ public class HomeController {
 			vacante1.setDescripcion("Solicitamos Ing. Civil para diseñar puente peatonal.");
 			vacante1.setFecha(sdf.parse("08-02-2019"));
 			vacante1.setSalario(8500.0);
+			vacante1.setDestacado(1);
+			vacante1.setImagen("empresa1.png");
 			
 						
 			// Creamos la oferta de Trabajo 2.
@@ -115,6 +111,8 @@ public class HomeController {
 			vacante2.setDescripcion("Empresa importante solicita contador con 5 años de experiencia titulado.");
 			vacante2.setFecha(sdf.parse("09-02-2019"));
 			vacante2.setSalario(12000.0);
+			vacante2.setDestacado(0);
+			vacante2.setImagen("empresa2.png");
 			
 			
 			// Creamos la oferta de Trabajo 3.
@@ -123,6 +121,7 @@ public class HomeController {
 			vacante3.setNombre("Ingeniero Eléctrico");
 			vacante3.setDescripcion("Empresa internacional solicita Ingeniero mecánico para mantenimiento de la instalación eléctrica.");
 			vacante3.setFecha(sdf.parse("10-02-2019"));
+			vacante3.setDestacado(0);
 			
 			
 			// Creamos la oferta de Trabajo 4.
@@ -132,6 +131,8 @@ public class HomeController {
 			vacante4.setDescripcion("Solicitamos Diseñador Gráfico titulado para diseñar publicidad de la empresa.");
 			vacante4.setFecha(sdf.parse("11-02-2019"));
 			vacante4.setSalario(7500.0);
+			vacante4.setDestacado(1);
+			vacante4.setImagen("empresa3.png");
 			
 			
 			/**
